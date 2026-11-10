@@ -17,6 +17,24 @@ I built the original for a sales team that had no shared view of who owned which
 | **My clients** | See your accounts and move one back to the pool. |
 | **Assignment queue** | Clients without an owner, grouped by country, with the rep whose territory it is. New clients are added here and badged "New". |
 
+## How it fits together
+
+```mermaid
+flowchart TB
+    R["Pick a rep"] --> P["My prospects"]
+    R --> CL["My clients"]
+    R --> Q["Assignment queue: clients without an owner"]
+    P --> G["Generate: Gemini suggests 8 companies like your clients"]
+    G --> DUP{"Already a client or prospect?"}
+    DUP -- yes --> DROP["Dropped"]
+    DUP -- no --> P
+    P --> QU["Qualify: Gemini scores the fit out of 100"]
+    P --> ST["Status and notes"]
+    CL -- "Move to pool" --> Q
+    Q -- "Assign to a rep" --> CL
+    ST --> LS[("Browser storage")]
+```
+
 ## Run it
 
 1. Download or clone the repo and open `index.html`.
