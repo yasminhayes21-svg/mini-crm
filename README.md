@@ -4,7 +4,7 @@ A one-file CRM for a small business development team: each rep sees their territ
 
 I built the original for a sales team that had no shared view of who owned which client or which prospects were already being worked. It is in use there. This is a generic copy with made-up reps and companies, so it can be shown publicly.
 
-**Open `index.html` in a browser.** No install, no account, no server.
+**Try it live: https://yasminhayes21-svg.github.io/mini-crm/** or open `index.html` in a browser. No install, no account, no server.
 
 ## What it does
 
